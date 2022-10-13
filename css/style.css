@@ -1,5 +1,5 @@
 
-html, body, main, section, header, div, article, aside, figure, figcaption, image, iframe, h1, h2, h3, h4, h5, h6, p, table, blockquote {
+html, body, main, section, header, div, article, aside, figure, figcaption, image, iframe, h1, h2, h3, h4, h5, h6, p, {
     margin: 0;
     padding: 0;
   }
@@ -53,7 +53,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     
   }
   .nav-link a {
-    padding-top: 1.2rem;
+    padding-top: .2rem;
     margin-left: 1.5rem;
     transition: var(--reg);
   }
@@ -67,7 +67,7 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   .logo h1 {
     padding-top: 1.2rem;
     padding-left: 1.2rem;
-    font-size: 40px;
+    font-size: 45px;
   }
   .center {
     line-height: 3.2rem;
@@ -91,7 +91,9 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   }
   .left {
     display: flex;
-    background-color: #130e0e;
+    background-color: #080808;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
   }
   .left p {
     float: left;
@@ -102,13 +104,18 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   }
   .left img {
     float: right;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+
   }
   
   
   .eboard img {
     border-radius: 100%;
+    object-fit: cover;
     height: 200px;
-    width: 200px;
+    min-width: 200px;
   }
    .eboard img:hover{
     cursor: pointer;
@@ -127,12 +134,14 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
   }
   .right {
     display: flex;
-    background-color: #130e0e;
+    background-color: #080808;
     margin-bottom: 1.5rem;
   }
 
   .right iframe {
-    width: 50%;
+    margin: auto;
+    width: 500px;
+    height: 300px;
     float: left;
   }
   .right p {
@@ -151,27 +160,33 @@ html, body, main, section, header, div, article, aside, figure, figcaption, imag
     justify-content: space-between;
     font-size: 1.4rem;
   }
-  /*-- Media Queries --*/
+ 
   @media screen and (min-width: 550px) {
     body {width: 98vw;}
   }
   @media screen and (min-width: 768px) {
     body {width: 86vw;}
-    blockquote {width: 50vw;}
+    
   }
   @media screen and (min-width: 990px) {
     body {width: 84vw;}
-    .main-nav {flex-direction: row; justify-content: space-between;}
-    section.odd {grid-template-columns: 1fr 1fr;}
-    section.even {grid-template-columns: 1fr 1fr;}
-    .glass-outer {order: inherit;}
+    
+   
   }
   @media screen and (min-width: 1280px) {
     body {width: 80vw;}
-    blockquote {width: 33vw;}
+   
+   
   }
   @media screen and (min-width: 1440px) {
     body {width: 78vw;}
-    section.odd {grid-template-columns: 8fr 4fr;}
-    section.even {grid-template-columns: 4fr 8fr;}
+   
+  }
+
+  @media screen and (max-width: 990px) {
+    .eboard {flex-direction: column; align-items: center;}
+    .right {flex-direction: column;}
+    .left {flex-direction: column;}
+    
+    
   }

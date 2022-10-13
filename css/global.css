@@ -1,8 +1,4 @@
-::selection { /* Optional */
-    text-shadow: none;
-    color: #fff;
-    background-color: #00f;
-  }
+
   
   html {
     /* Declare your font family type in the html selector, then your font-family in the body selector */
